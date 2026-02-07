@@ -35,7 +35,7 @@
     }
     </script>
 
-    <!-- CORE SCRIPTS (Visual & Logic only - No Tracking) -->
+    <!-- CORE SCRIPTS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -51,7 +51,8 @@
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .font-serif-display { font-family: 'Playfair Display', serif; }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .image-container { border-radius: 1.5rem; overflow: hidden; background: #fff; width: 100%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: none; }
+        /* Image container sem bordas, sombras ou fundo fixo */
+        .image-container { border-radius: 0; overflow: hidden; width: 100%; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border: none; }
         .cta-glow { box-shadow: 0 10px 25px -5px rgba(250, 94, 65, 0.4); }
         [x-cloak] { display: none !important; }
         
@@ -168,14 +169,15 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 relative">
-                    <div class="image-container shadow-2xl relative bg-white">
+                    <!-- Container sem sombra e sem fundo para remover as bordas visuais -->
+                    <div class="image-container relative">
                         <template x-for="(slide, index) in slides" :key="index">
                             <img :src="slide" 
                                  x-show="currentSlide === index" 
                                  x-transition:enter="transition duration-700"
                                  x-transition:enter-start="opacity-0 scale-95"
                                  x-transition:enter-end="opacity-100 scale-100"
-                                 class="absolute inset-0 w-full h-full object-contain p-8" 
+                                 class="absolute inset-0 w-full h-full object-contain" 
                                  alt="Citrus Burn Bottle"
                                  onerror="this.src='https://placehold.co/600x600/FA5E41/FFFFFF?text=Citrus+Burn';">
                         </template>
