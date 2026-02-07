@@ -14,14 +14,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Citrus Burn - Reignite Your Metabolism" />
     <meta property="og:description" content="Feel lighter, more energized, and back in control. Today with free shipping." />
-    <meta property="og:image" content="https://placehold.co/1200x630/FA5E41/FFFFFF?text=Citrus+Burn" />
+    <meta property="og:image" content="images/citrusburn.png" />
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Citrus Burn",
-      "image": "https://placehold.co/600x600/FA5E41/FFFFFF?text=Citrus+Burn",
+      "image": "https://citrus-burn.vercel.app/images/citrusburn.png",
       "description": "Natural metabolism support specifically designed for those looking to feel lighter and more energized.",
       "brand": { "@type": "Brand", "name": "Citrus Burn" },
       "offers": {
@@ -71,7 +71,7 @@
 <body class="bg-white text-slate-900 overflow-x-hidden" x-data="{ 
     showModal: false, modalTitle: '', modalType: '',
     currentSlide: 0,
-    slides: ['https://placehold.co/800x800/FA5E41/FFFFFF?text=Citrus+Burn+Bottle', 'https://placehold.co/800x800/FFE7E3/FA5E41?text=Metabolism+Support', 'https://placehold.co/800x800/FA5E41/FFFFFF?text=Clean+Formula'],
+    slides: ['images/citrusburn.png', 'images/citrusburn.png', 'images/citrusburn.png'],
     openPolicy(type, title) { this.modalType = type; this.modalTitle = title; this.showModal = true; document.body.style.overflow = 'hidden'; },
     closePolicy() { this.showModal = false; document.body.style.overflow = 'auto'; }
 }" x-init="setInterval(() => { currentSlide = (currentSlide + 1) % slides.length }, 4000)">
@@ -91,7 +91,8 @@
     <header class="bg-white/95 backdrop-blur-md sticky top-[35px] md:top-[38px] z-[60] py-4 border-b border-orange-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
             <div class="flex items-center">
-                <span class="text-2xl font-black tracking-tighter text-[#FA5E41] flex items-center gap-1">
+                <img src="images/citrus-logo.png" alt="Citrus Burn Logo" class="h-8 md:h-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span class="text-2xl font-black tracking-tighter text-[#FA5E41] hidden items-center gap-1">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 7h2v6h-2zm0 8h2v2h-2z"/></svg>
                     CITRUS BURN
                 </span>
@@ -174,7 +175,8 @@
                                  x-transition:enter-start="opacity-0 scale-95"
                                  x-transition:enter-end="opacity-100 scale-100"
                                  class="absolute inset-0 w-full h-full object-contain p-8" 
-                                 alt="Citrus Burn Bottle">
+                                 alt="Citrus Burn Bottle"
+                                 onerror="this.src='https://placehold.co/600x600/FA5E41/FFFFFF?text=Citrus+Burn';">
                         </template>
                     </div>
                     <!-- Decorative Element -->
@@ -189,57 +191,80 @@
 
         <!-- Purchase Options -->
         <section id="options" class="py-16 scroll-mt-24">
-            <h2 class="text-3xl md:text-5xl font-black text-center mb-16 font-serif-display text-slate-900">Choose Your Option</h2>
+            <h2 class="text-3xl md:text-5xl font-black text-center mb-16 font-serif-display text-slate-900 tracking-tight">Select Your Access</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto px-4">
                 
                 <!-- OPTION 1 (DTC) - RECOMMENDED -->
-                <div class="bg-white rounded-[2.5rem] p-10 border-4 border-[#FA5E41] shadow-2xl relative flex flex-col hover:scale-[1.02] transition-transform">
-                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FA5E41] text-white px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase shadow-lg">RECOMMENDED OPTION</div>
+                <div class="bg-white rounded-[2.5rem] p-8 border-4 border-[#FA5E41] shadow-2xl relative flex flex-col hover:scale-[1.02] transition-transform z-20">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FA5E41] text-white px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase shadow-lg whitespace-nowrap">RECOMMENDED OPTION</div>
                     
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-black text-[#FA5E41] leading-tight">GET UP TO 80% DISCOUNT NOW</h3>
-                        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">Direct to secure checkout</p>
+                    <div class="mb-6 mt-2">
+                        <h3 class="text-xl font-black text-[#FA5E41] leading-tight uppercase">Get up to 80% Discount Now</h3>
+                        <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Go straight to secure checkout</p>
                     </div>
 
                     <p class="text-sm text-slate-600 mb-8 leading-relaxed">
                         Ideal for those who have already decided to buy and want to guarantee the best price available today on the official site.
                     </p>
 
-                    <ul class="space-y-4 mb-10 text-sm font-bold flex-grow text-slate-700">
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Discount applied automatically</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> SSL encrypted protected checkout</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> 180-day satisfaction guarantee</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Immediate access to official offer</li>
-                        <li class="flex items-center gap-3 text-red-500 uppercase italic text-[11px]"><span class="text-red-500 text-xl">⚠</span> Limited stock due to high demand</li>
+                    <ul class="space-y-3 mb-10 text-xs font-bold flex-grow text-slate-700">
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Discount applied automatically</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> SSL encrypted protected checkout</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> 180-day satisfaction guarantee</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Immediate access to official offer</li>
+                        <li class="flex items-center gap-3 text-red-500 uppercase italic text-[10px]"><span class="text-red-500 text-lg">⚠</span> Limited stock due to high demand</li>
                     </ul>
 
-                    <a href="https://hop.clickbank.net/?affiliate=vend02&vendor=citrusburn&pid=buy" class="w-full py-5 rounded-2xl bg-[#FA5E41] text-white font-black text-lg text-center shadow-xl hover:bg-orange-600 active:scale-95 transition-all animate-pulse-soft uppercase tracking-wider">
-                        YES, CLAIM MY DISCOUNT NOW
+                    <a href="https://mwebora.com/11997/3383/7/?#order-section" class="w-full py-5 rounded-2xl bg-[#FA5E41] text-white font-black text-sm text-center shadow-xl hover:bg-orange-600 active:scale-95 transition-all animate-pulse-soft uppercase tracking-wider">
+                        YES, SECURE MY DISCOUNT NOW
                     </a>
                 </div>
 
                 <!-- OPTION 2 (TSL) - LEARN MORE -->
-                <div class="bg-slate-50 rounded-[2.5rem] p-10 border border-slate-200 shadow-lg flex flex-col hover:border-orange-200 transition-colors">
+                <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-xl flex flex-col hover:border-orange-200 transition-colors">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-black text-slate-900 leading-tight">LEARN MORE BEFORE BUYING</h3>
-                        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">Official Information</p>
+                        <h3 class="text-xl font-black text-slate-900 leading-tight uppercase">Learn more before buying</h3>
+                        <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Full Product Information</p>
                     </div>
 
                     <p class="text-sm text-slate-600 mb-8 leading-relaxed">
-                        Prefer to understand everything before deciding? Access the full product page and discover how CitrusBurn™ works.
+                        Prefer to understand everything before deciding? Access the full product page to see ingredients and benefits.
                     </p>
 
-                    <ul class="space-y-4 mb-10 text-sm font-semibold flex-grow text-slate-700">
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> How CitrusBurn™ activates metabolism</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Ingredients and mechanism of action</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Expected benefits and real results</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Verified customer testimonials</li>
-                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-xl">✓</span> Full 180-day guarantee details</li>
+                    <ul class="space-y-3 mb-10 text-xs font-semibold flex-grow text-slate-700">
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> How the product activates metabolism</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Ingredients and mechanism of action</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Expected benefits and real results</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Verified customer testimonials</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Full 180-day guarantee details</li>
                     </ul>
 
-                    <a href="https://hop.clickbank.net/?affiliate=vend02&vendor=citrusburn" class="w-full py-5 rounded-2xl bg-white text-slate-900 border-2 border-slate-200 font-black text-lg text-center shadow-md hover:border-[#FA5E41] hover:text-[#FA5E41] active:scale-95 transition-all uppercase tracking-wider">
+                    <a href="https://mwebora.com/11997/3383/7/?" class="w-full py-5 rounded-2xl bg-slate-900 text-white font-black text-sm text-center shadow-md hover:bg-slate-800 active:scale-95 transition-all uppercase tracking-wider">
                         VIEW FULL PRODUCT PAGE
+                    </a>
+                </div>
+
+                <!-- OPTION 3 (VSL) - WATCH VIDEO -->
+                <div class="bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 shadow-lg flex flex-col">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-black text-slate-900 leading-tight uppercase">Watch explanatory video</h3>
+                        <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Simple Presentation</p>
+                    </div>
+
+                    <p class="text-sm text-slate-600 mb-8 leading-relaxed">
+                        Want a simple video explanation? Discover why so many people are re-activating their metabolism step by step.
+                    </p>
+
+                    <ul class="space-y-3 mb-10 text-xs font-semibold flex-grow text-slate-700">
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Understand the hidden metabolic problem</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> See how the solution works in the body</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Discover who should use it</li>
+                        <li class="flex items-center gap-3"><span class="text-[#FA5E41] text-lg">✓</span> Real results explained clearly</li>
+                    </ul>
+
+                    <a href="https://mwebora.com/11997/3383/3/?" class="w-full py-5 rounded-2xl bg-white text-slate-900 border-2 border-slate-200 font-black text-sm text-center shadow-sm hover:border-[#FA5E41] hover:text-[#FA5E41] active:scale-95 transition-all uppercase tracking-wider">
+                        YES, WATCH VIDEO NOW
                     </a>
                 </div>
 
@@ -265,16 +290,7 @@
                         <svg :class="active === 2 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform text-[#FA5E41]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div x-show="active === 2" x-collapse class="px-6 pb-6 text-sm text-slate-500 leading-relaxed">
-                        We are so confident in our formula that we offer a full 180-day money-back guarantee. If you don't feel lighter and more energized after completing your chosen pack, simply contact us for a full refund—no questions asked.
-                    </div>
-                </div>
-                <div class="border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                    <button @click="active = (active === 3 ? null : 3)" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-slate-800 transition-colors" :class="active === 3 ? 'bg-orange-50' : 'bg-white'">
-                        <span>Are there any stimulants?</span>
-                        <svg :class="active === 3 ? 'rotate-180' : ''" class="w-5 h-5 transition-transform text-[#FA5E41]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div x-show="active === 3" x-collapse class="px-6 pb-6 text-sm text-slate-500 leading-relaxed">
-                        No. CitrusBurn™ uses a clean, plant-based formula designed to provide steady energy without the "jitters" or crashes associated with typical weight loss supplements containing harsh stimulants.
+                        We are so confident in our formula that we offer a full 180-day money-back guarantee. If you don't feel lighter and more energized, simply contact us for a full refund—no questions asked.
                     </div>
                 </div>
             </div>
@@ -289,7 +305,7 @@
                 <span class="text-[10px] text-slate-400 font-bold line-through uppercase tracking-tighter">MSRP $49.90</span>
                 <span class="text-2xl font-black text-[#FA5E41]">$9.99</span>
             </div>
-            <a href="#options" class="flex-1 bg-[#FA5E41] text-white text-center font-black py-4 rounded-xl text-sm tracking-widest animate-pulse-soft">
+            <a href="#options" class="flex-1 bg-[#FA5E41] text-white text-center font-black py-4 rounded-xl text-xs tracking-widest animate-pulse-soft">
                 CLAIM MY DISCOUNT NOW
             </a>
         </div>
@@ -336,7 +352,6 @@
                                 <li><strong>International Shipping:</strong> 7-14 business days depending on location.</li>
                                 <li><strong>Tracking:</strong> You will receive a tracking number via email as soon as your package leaves our warehouse.</li>
                             </ul>
-                            <p>We ship all our products climate-neutrally using major carriers like FedEx, UPS, and DHL.</p>
                         </div>
                     </template>
                     
@@ -353,7 +368,6 @@
                         <div>
                             <h2>Privacy Policy</h2>
                             <p>Your privacy is our priority. We use secure SSL encryption to protect your payment details and never share your personal information with unauthorized third parties.</p>
-                            <p>We collect data only to process your order and improve your shopping experience. You can request the deletion of your data at any time by contacting our support.</p>
                         </div>
                     </template>
 
@@ -363,7 +377,6 @@
                             <p>Do you have questions about your order or our formula? Our team is here to help.</p>
                             <p><strong>Email Support:</strong> support@citrusburn.com</p>
                             <p><strong>Phone Support:</strong> +1 (888) 430-7103</p>
-                            <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
                         </div>
                     </template>
                 </div>
