@@ -6,6 +6,10 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://citrus-burn.vercel.app/" />
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/faviconV2.png">
+    <link rel="shortcut icon" type="image/png" href="images/faviconV2.png">
+
     <title>Citrus Burn - Feel Like Yourself Again | 75% DISCOUNT</title>
     <meta name="description" content="After 35, your metabolism naturally slows. CitrusBurn™ helps restart your body’s fat-burning process so you can feel lighter, more energized, and back in control — without harsh stimulants or restrictive diets." />
     <meta name="keywords" content="Citrus Burn, metabolism, fat burning, natural energy, weight management, citrus supplement" />
@@ -52,7 +56,7 @@
         .font-serif-display { font-family: 'Playfair Display', serif; }
         .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         
-        /* Limpeza completa de bordas, sombras e fundos das imagens */
+        /* Image container sem bordas, sombras ou fundo fixo */
         .image-container { 
             background: transparent !important; 
             box-shadow: none !important; 
@@ -102,7 +106,7 @@
         </span>
     </div>
 
-    <!-- Main Navigation - Updated to Orange for white logo -->
+    <!-- Cabeçalho Laranja para Logo Branca -->
     <header class="bg-[#FA5E41] sticky top-[35px] md:top-[38px] z-[60] py-4 shadow-md">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
             <div class="flex items-center">
@@ -202,7 +206,7 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto px-4">
                 
-                <!-- OPTION 1 (DTC) -->
+                <!-- DTC RECOMMENDED -->
                 <div class="bg-white rounded-[2.5rem] p-8 border-4 border-[#FA5E41] shadow-2xl relative flex flex-col hover:scale-[1.02] transition-transform z-20">
                     <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FA5E41] text-white px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase shadow-lg whitespace-nowrap">RECOMMENDED OPTION</div>
                     
@@ -228,7 +232,7 @@
                     </a>
                 </div>
 
-                <!-- OPTION 2 (TSL) -->
+                <!-- TSL LEARN MORE -->
                 <div class="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-xl flex flex-col hover:border-orange-200 transition-colors">
                     <div class="mb-6">
                         <h3 class="text-xl font-black text-slate-900 leading-tight uppercase">Learn more before buying</h3>
@@ -252,7 +256,7 @@
                     </a>
                 </div>
 
-                <!-- OPTION 3 (VSL) -->
+                <!-- VSL VIDEO -->
                 <div class="bg-slate-50 rounded-[2.5rem] p-8 border border-slate-200 shadow-lg flex flex-col">
                     <div class="mb-6">
                         <h3 class="text-xl font-black text-slate-900 leading-tight uppercase">Watch explanatory video</h3>
@@ -312,7 +316,7 @@
                 <span class="text-[10px] text-slate-400 font-bold line-through uppercase tracking-tighter">MSRP $49.90</span>
                 <span class="text-2xl font-black text-[#FA5E41]">9.99</span>
             </div>
-            <a href="#options" class="flex-1 bg-[#FA5E41] text-white text-center font-black py-4 rounded-xl text-sm tracking-widest animate-pulse-soft">
+            <a href="#options" class="flex-1 bg-[#FA5E41] text-white text-center font-black py-4 rounded-xl text-xs tracking-widest animate-pulse-soft">
                 CLAIM MY DISCOUNT NOW
             </a>
         </div>
@@ -338,7 +342,7 @@
         </div>
     </footer>
 
-    <!-- Modals (Policies) -->
+    <!-- Modals -->
     <div x-show="showModal" class="fixed inset-0 z-[100] overflow-y-auto" x-cloak>
         <div class="flex items-center justify-center min-h-screen px-4">
             <div x-show="showModal" @click="closePolicy()" class="fixed inset-0 bg-slate-900/80 backdrop-blur-md transition-opacity"></div>
